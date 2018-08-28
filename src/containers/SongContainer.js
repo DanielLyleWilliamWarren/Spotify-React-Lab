@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import SongDetails from '../components/SongDetails.js';
+import './container.css'
 
 
 class SongContainer extends Component {
@@ -10,7 +11,7 @@ class SongContainer extends Component {
     }
   }
   componentDidMount(){
-    const url = 'https://itunes.apple.com/gb/rss/topsongs/limit=20/json';
+    const url = 'https://itunes.apple.com/gb/rss/topsongs/limit=200/json';
     fetch(url)
     .then((res) => {
       return res.json();
@@ -23,7 +24,7 @@ class SongContainer extends Component {
   render(){
     return(
       <div>
-        <h2>Top 20 Songs!</h2>
+        <h2 className="titlePage">Top 20 Songs!</h2>
         <SongDetails
           songs = {this.state.songs}/>
         </div>
