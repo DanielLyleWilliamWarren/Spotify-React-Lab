@@ -6,7 +6,7 @@ const SongDetails = function (props) {
 
   const songsArray = props.songs.map((song, index) => {
     return(
-      <Song title = {song["im:name"].label} artist={song["im:artist"].label} key={index} image= {song["im:image"][2].label}/>)
+      <Song title = {song["im:name"].label} artist={song["im:artist"].label} key={index} image= {song["im:image"][2].label} soundBite={song.link[1].attributes}/>)
 });
 
 //
